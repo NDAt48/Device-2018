@@ -10,10 +10,16 @@
       <a class="main-header-logo">
         <img src="img/logo-header.png" width="164" height="36" alt="Логотипа интернет-магазина «Девайс»">
       </a>
-      <!-- Здесь будет форма поиска -->
+      <form class="site-search" action="#" method="get">
+        <label class="visually-hidden" for="site-search">Поиск по сайту</label>
+        <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" value="">
+        <button class="visually-hidden button button-search" type="submit">Найти</button>
+      </form>
       <nav class="main-menu">
         <ul class="user-navigation">
-          <li class="login-link">Войти</li>
+          <li class="login-link">
+            <a class="login-link" href="login.html">Войти</a>
+          </li>
         </ul>
         <ul class="magazine-actions">
           <li><a href="compare.html">Сравнить</a></li>
@@ -144,16 +150,16 @@
         <h2 class="visually-hidden">Наши партнеры</h2>
         <ul class="partners-list">
           <li class="partners-item">
-          <a href="#"><img src="img/logo-1.png" width="260" height="100" alt="dji"></a>
+            <a href="#"><img src="img/logo-1.png" width="260" height="100" alt="dji"></a>
           </li>
           <li class="partners-item">
-          <a href="#"><img src="img/logo-2.png" width="260" height="100" alt="sp-gadgets"></a>
+            <a href="#"><img src="img/logo-2.png" width="260" height="100" alt="sp-gadgets"></a>
           </li>
           <li class="partners-item">
-          <a href="#"><img src="img/logo-3.png" width="260" height="100" alt="Gopro"></a>
+            <a href="#"><img src="img/logo-3.png" width="260" height="100" alt="Gopro"></a>
           </li>
           <li class="partners-item">
-          <a href="#"><img src="img/logo-4.png" width="260" height="100" alt="Vive"></a>
+            <a href="#"><img src="img/logo-4.png" width="260" height="100" alt="Vive"></a>
           </li>
         </ul>
       </section>
@@ -210,13 +216,29 @@
     </footer>
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
-      <button class="button" type="submit">Отправить</button>
+      <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="write-us-name">Ваше имя:</label>
+          <input class="write-us-name" id="write-us-name" type="text" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-us-email">Ваш e-mail:</label>
+          <input class="write-us-email" id="write-us-email" type="email" name="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write-us-comment">Текст письма:</label>
+          <textarea class="write-us-comment" id="write-us-comment" placeholder="В свободной форме"></textarea>
+        </p>
+        <button class="button" type="submit">Отправить</button>
+      </form>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
+      <p>
+        <img src="img/map-big.jpg" width="969" height="559" alt="Офис компании по адресу г.Москва, Ул. Строителей 15">
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
     </section>
   </body>
 </html>
