@@ -20,6 +20,365 @@
 body {
 	margin: 0;
   padding: 0;
-
-  
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.3px;
 }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.button {
+  color: #000000;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+
+  border: none;
+  background-color: transparent;
+}
+.button:hover {
+
+}
+
+.button:active {
+  opacity: 0.3;
+}
+
+.main-header {
+  background-color: #f7e296;
+}
+
+.header-logo {
+  font-family: "Gilroy", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 48px;
+  color: #000000;
+}
+
+.inner-page .header-logo:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.inner-page .header-logo:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form input[type="search"] {
+  font: inherit;
+
+  background-color: #f7e296;
+  border: none;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;   
+  opacity: 0.3;
+  outline: none;
+}
+
+.search-form input[type="search"]:hover {
+  opacity: 0.6;
+}
+
+.search-form input[type="search"]:focus {
+  border-bottom: 2px solid #000000;
+  opacity: 1;
+}
+
+.button-search{ 
+  font: inherit;
+
+  color: #000000;
+  text-align: center;
+  vertical-align: bottom;
+
+  background-color: #f7e296;
+  border: 2px solid #000000;
+
+  outline: none;
+}
+
+.button-search:hover {
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.button-search:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.header-user-menu {
+  list-style: none;
+}
+
+.header-user-menu a{
+  color: #000000;
+}
+
+.header-user-menu a:hover {
+  opacity: 0.6;
+}
+
+.header-user-menu a:active {
+  opacity: 0.3;
+}
+
+.site-menu  {
+  list-style: none;
+}
+
+.site-menu a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+
+  color: #000000;
+}
+
+.site-menu a:hover {
+  opacity: 0.6;
+}
+
+.site-menu a:active {
+  opacity: 0.3;
+}
+
+.catalog-menu-navigation {
+  list-style: none;
+}
+.catalog-menu-navigation a{
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 30px;
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+
+.number-slide {
+  color: #ffffff;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 179.2px;
+  font-weight: bold;
+  line-height: 179.2px;
+}
+.slider-item h3 {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+.slider-item tr:nth-child(1) {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.slider-item tr:nth-child(2) {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.popular-items-navigation {
+  list-style: none;
+}
+
+.popular-items-navigation a {
+  color: #000000;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.popular-item-background {
+  width: 50px;
+  height: 50px;
+  background-color: #f7e296;
+}
+
+.popular-item:hover .popular-item-background {
+  background-color: #f0c52e;
+}
+
+.popular-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.slider-vertical {
+  background-color: #e5e5e5;
+}
+.slider-vertical-list {
+  list-style: none;
+}
+
+.slider-vertical-item h3 {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: bold;
+}
+
+.slider-vertical-item-button:active {
+  color: #f7e184;
+  background-color: #000000;
+  opacity: 1;
+}
+
+.partners ul {
+  list-style: none;
+}
+
+.partners li {
+  position: relative;
+}
+
+.partners-item img:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.partners-item:hover img:last-child {
+  opacity: 1;
+}
+
+.partners-item:hover img:first-child {
+  opacity: 0;
+}
+
+.inner-columns h2 {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  font-weight: bold;
+  line-height: 48px;;
+}
+
+.inner-columns p {
+  letter-spacing: 0;
+}
+
+.about ul {
+  list-style: none;
+}
+
+.transport-companies li {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 40px;;
+  letter-spacing: 0;
+}
+
+footer {
+  color: #ffffff;
+  background-color: #464646;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.footer-logo {
+  font-family: "Gilroy", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 48px;
+  color: #ffc600;
+}
+
+.inner-page .footer-logo:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.inner-page .footer-logo:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-user-menu a {
+  line-height: 36px;
+  opacity: 0.7;
+}
+
+.footer-user-menu a:hover {
+  opacity: 1;
+}
+
+
+.footer-user-menu a:active {
+  opacity: 0.3;
+}
+
+.footer-site-menu a {
+  color: #ffffff;
+}
+
+.modal-write-us label {
+  color: #000000;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.modal-write-us input,
+.modal-write-us textarea  {
+
+  color: #464646;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0;
+
+  border: 3px solid transparent;
+  background-color: #e5e5e5;
+  opacity: 0.5;
+}
+
+.modal-write-us input:hover,
+.modal-write-us textarea:hover {
+  opacity: 0.8;
+} 
+
+.modal-write-us input:focus,
+.modal-write-us textarea:focus {
+  border: 3px solid #f0c52e;
+}
+
+.modal-write-us input:invalid,
+.modal-write-us textarea:invalid {
+  background-color: #edb5b5;
+}
+
+.modal-map img {
+  box-shadow: 10px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+
+
+
+
+
+
