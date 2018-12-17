@@ -64,17 +64,21 @@ img {
 }
 
 .main-header {
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 50px;
   margin-top: 40px;
-  background-color: #f7e296;
+}
+
+.inner-page .main-header {
+  margin-bottom: 40px;
 }
 
 .main-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 50px;
+  background-color: #f7e296;
 }
 
 .header-logo {
@@ -387,6 +391,10 @@ img {
 }
 
 .page-title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: 60px;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   font-weight: bold;
@@ -394,12 +402,16 @@ img {
 }
 
 .breadcrumbs {
+  padding: 0;
+  margin: 0;
+  margin-left: 60px;
+  margin-bottom: 45px;
   list-style: none;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .breadcrumbs a {
-  font-size: 14px;
-  line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -411,22 +423,29 @@ img {
   color: rgba(0, 0, 0, 0.1);
 }
 
-.filters {
-  background-color: #efefef;
+.content-and-filters{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.filter {
+  padding: 0;
+  margin: 0;
+  margin-left: 60px;
 }
 
 .filters h2,
-.filters-top h2 {
+.filters-top h2,
+.filters-top b {
+  margin: 0;
+  padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-}
-
-.filters h2 {
-  background-color: #dbdbdb;
 }
 
 .filters ul,
@@ -460,7 +479,15 @@ img {
 }
 
 .filters-top {
+background-color: #ebebeb; /*линейный градиент запилить*/
+}
+
+.filters-top-list {
+  display: flex;
   background-color: #ebebeb;
+  margin: 0;
+  padding: 0;
+  margin-left: 60px;
 }
 
 .filters-top-list a {

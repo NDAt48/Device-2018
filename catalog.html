@@ -8,22 +8,22 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="inner-page">
-     <header class="main-header">
-      <a class="header-logo" href="index.html">DEVICE</a>
-      <form class="search-form" action="#" method="get">
+     <header class="main-header container">
+      <nav class="main-menu">
+        <a class="header-logo" href="index.html">DEVICE</a>
+        <form class="search-form" action="#" method="get">
         <label class="visually-hidden" for="site-search">Поиск по сайту</label>
         <input type="search" id="site-search" name="search" placeholder="Поиск по сайту" value="">
         <button class="visually-hidden button-search" type="submit">Найти</button>
-      </form>
-      <nav class="main-menu">
+        </form>
         <ul class="header-user-menu">
           <li><a href="#">Войти</a></li>
           <li><a href="#">Сравнить</a></li>
           <li><a href="#">Корзина</a></li>
       </ul>
         <ul class="catalog-menu">
-          <li class="site-menu"><a href="#">Каталог Товаров</a>
-            <ul class="catalog-menu-navigation">
+          <li class="site-menu catalog-menu-visible"><a href="#">Каталог Товаров</a>
+            <ul class="hidden catalog-menu-navigation">
               <li><a href="#">Виртуальная реальность</a></li>
               <li><a href="#">Моноподы для селфи</a></li>
               <li><a href="#">Экшн-камеры</a></li>
@@ -40,17 +40,30 @@
         </ul>
       </nav>
     </header>
-    <main class="container">
-      <h1 class="page-title">Моноподы для селфи</h1>
-
-      <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог товаров</a></li>
-        <li><a href="#">Моноподы для селфи</a></li>
-      </ul>
-
+    <main>
+      <section class="catalog-tittle container">
+          <h1 class="page-title">Моноподы для селфи</h1>
+          <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li><a href="#">Моноподы для селфи</a></li>
+        </ul>
+      </section>
+        <section class="filters-top">
+        <div class="container">
+        <b class="filter-pseudo-tittle">Фильтр:</b>
+        <h2>Сортировка</h2>
+        <ul class="filters-top-list">
+          <li class="price"><a href="#" class="active">По цене</a></li> <!-- Классы для js настройки сортировки  -->
+          <li class="type"><a href="#">По типу</a></li>
+          <li class="popularity"><a href="#">По популярности</a></li>
+        </ul>
+      </div>
+      </section>
+      <div class="content-and-filters">
       <section class="filters">
-        <h2>Фильтр:</h2>
+        <div class="container">
+          <h2 class="visually-hidden">Фильтр:</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Стоимость</legend>
@@ -101,15 +114,7 @@
           </fieldset>
           <button class="button filter-button" type="submit">Показать</button>
       </form>
-      </section>
-
-      <section class="filters-top">
-        <h2>Сортировка</h2>
-        <ul class="filters-top-list">
-          <li class="price"><a href="#" class="active">По цене</a></li> <!-- Классы для js настройки сортировки  -->
-          <li class="type"><a href="#">По типу</a></li>
-          <li class="popularity"><a href="#">По популярности</a></li>
-        </ul>
+      </div>
       </section>
 
       <section class="catalog">
@@ -184,8 +189,10 @@
           <li><a class="pagination-forward" href="#">Вперед</a></li>
         </ul>
       </section>
+    </div>
     </main>
-    <footer>
+    <footer class="main-footer">
+      <div class="container">
       <div class="footer-top">
         <a class="footer-logo" href="index.html">DEVICE</a>
         <ul class="footer-user-menu">
@@ -213,6 +220,7 @@
           <a class="button-copyright" href="https://htmlacademy.ru">HTML Academy</a>
         </p>
       </div>
+    </div>
     </footer>
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
