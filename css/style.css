@@ -37,6 +37,10 @@ img {
   max-width: 100%;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 .button {
   color: #000000;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -423,21 +427,21 @@ img {
   color: rgba(0, 0, 0, 0.1);
 }
 
-.content-and-filters{
+
+.filters-top {
+  width: 100%;
+  background: 
+  linear-gradient(to right,#dbdbdb 0%,#dbdbdb 49%,#ebebeb 50%,#ebebeb 100%);
+  overflow: hidden;
+}
+
+.filters-top .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  align-items: center;
 }
 
-.filter {
-  padding: 0;
-  margin: 0;
-  margin-left: 60px;
-}
-
-.filters h2,
-.filters-top h2,
-.filters-top b {
+.content-and-filters h2,
+.filters-top h2 {
   margin: 0;
   padding: 0;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -448,46 +452,51 @@ img {
   text-transform: uppercase;
 }
 
-.filters ul,
+.filters-top h2  {
+  width: 160px;
+  padding-left: 70px;
+}
+
+
+.filter-pseudo-tittle {
+  display: block;
+  width: 200px;
+  margin-left: 60px;
+  padding-right: 68px;
+  background-color: #dbdbdb;
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.catalog-sort {
+  display: flex;
+  align-items: center;
+  width: 832px;
+  background-color: #ebebeb;
+}
+
+.content-and-filters ul,
 .filters-top ul {
   list-style: none;
 }
 
-.filters fieldset {
-  border: none;
-}
-.filters legend {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.filters label {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 40px;
-}
-
-.price-filter span {
-  font-family: "Gilroy", "Arial", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.filters-top {
-background-color: #ebebeb; /*линейный градиент запилить*/
-}
 
 .filters-top-list {
-  display: flex;
-  background-color: #ebebeb;
+  width: 300px;
   margin: 0;
   padding: 0;
-  margin-left: 60px;
+  padding-left: 40px;
+}
+
+.catalog-sort-direction {
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  padding-left: 200px;
 }
 
 .filters-top-list a {
@@ -504,6 +513,77 @@ background-color: #ebebeb; /*линейный градиент запилить*
   color:rgba(0, 0, 0, 1);
 }
 
+.content-and-filters {
+  overflow: hidden;
+  background: 
+  linear-gradient(to right,#efefef 0%,#efefef 29%,#fff 30%,#fff 100%);
+}
+
+.height-alignment { /*Класс чтобы тянулся чтобы фон тянулся на всю высоту*/
+    display: flex;
+    align-content: stretch;
+}
+
+.content-and-filters .container {
+  display: flex;
+}
+
+.content-and-filters fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.content-and-filters legend {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.content-and-filters label {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.filter {
+  width: 268px;
+  margin-left: 60px;
+  padding-top: 80px;
+  background-color: #efefef;
+}
+
+.filter-form {
+  width: 200px;
+}
+.filters-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-filter span {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.catalog {
+  width: 760px;
+  padding-left: 72px;
+  margin-top: 70px;
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+}
 .catalog ul {
   list-style: none;
 }
@@ -511,6 +591,16 @@ background-color: #ebebeb; /*линейный градиент запилить*
 .catalog a {
   color: #000000;
 }
+
+.catalog-item {
+  width: 360px;
+  margin-top: 40px;
+}
+
+.catalog-item:nth-child(odd) {
+  margin-right: 40px;
+}
+
 .catalog-item h3 {
   color: #000000;
   font-family: "Gilroy", "Arial", sans-serif;
@@ -548,6 +638,14 @@ background-color: #ebebeb; /*линейный градиент запилить*
 }
 
 .pagination-list {
+  position: relative;
+  display: flex;
+  width: 510px;
+  justify-content: center;
+  padding: 0;
+  padding: 25px 125px;
+  margin: 0;
+  margin-bottom: 73px;
   color: #000000;
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 16px;
@@ -555,22 +653,53 @@ background-color: #ebebeb; /*линейный градиент запилить*
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-  list-style: none;
   background-color: #ebebeb;
 }
 
-.pagination-back:hover {
-  background-color: #d9d9d9;
+.pagination-list li {
+  margin: 0 16px;
 }
 
-.pagination-back:active {
- color: rgba(0, 0, 0, 0.3);   
+.pagination-list a {
+  display: inline-block;
 }
 
+li.pagination-back-item, 
+li.pagination-forward-item {
+    position: absolute;
+    top: 0;
+    width: 125px;
+    height: 70px;
+    margin: 0;
+}
+
+li.pagination-forward-item {
+    right: 0;
+    text-align: left;
+}
+
+li.pagination-back-item {
+  left: 0;
+  text-align: right;
+}
+
+.pagination-list .current {
+  color: #000000;
+}
+
+.pagination-back ,
+.pagination-forward {
+  width: 85px;
+  padding: 25px 20px;
+  margin: 0;
+}
+
+.pagination-back:hover,
 .pagination-forward:hover {
   background-color: #d9d9d9;
 }
 
+.pagination-back:active,
 .pagination-forward:active {
  color: rgba(0, 0, 0, 0.3);   
 }
@@ -593,6 +722,10 @@ a.pagination-item:active {
   padding: 65px 0;
   color: #ffffff;
   background-color: #464646;
+}
+
+.footer-catalog {
+  margin-top: 5px;
 }
 
 .main-footer .container {

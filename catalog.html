@@ -49,34 +49,41 @@
           <li><a href="#">Моноподы для селфи</a></li>
         </ul>
       </section>
-        <section class="filters-top">
-        <div class="container">
+
+      <section class="filters-top">
+      <div class="container">
         <b class="filter-pseudo-tittle">Фильтр:</b>
-        <h2>Сортировка</h2>
-        <ul class="filters-top-list">
-          <li class="price"><a href="#" class="active">По цене</a></li> <!-- Классы для js настройки сортировки  -->
-          <li class="type"><a href="#">По типу</a></li>
-          <li class="popularity"><a href="#">По популярности</a></li>
-        </ul>
+        <div class="catalog-sort">
+          <h2>Сортировка:</h2>
+          <ul class="filters-top-list">
+             <li class="price"><a href="#" class="active">По цене</a></li>
+             <li class="type"><a href="#">По типу</a></li>
+             <li class="popularity"><a href="#">По популярности</a></li>
+          </ul>
+          <ul class="catalog-sort-direction">
+             <li><a class="btn-up" href="#">up</a></li>
+             <li><a class="btn-down current">down</a></li>
+          </ul>
+        </div>
       </div>
-      </section>
-      <div class="content-and-filters">
-      <section class="filters">
-        <div class="container">
+    </section>
+      <section class="content-and-filters">
+         <div class="height-alighnment container"> <!-- Класс чтобы тянулся чтобы фон тянулся на всю высоту -->
+          <section class="filter">
           <h2 class="visually-hidden">Фильтр:</h2>
-        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
+          <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Стоимость</legend>
-            <div class="price-filter">
+            <section class="price-filter">
               <label class="visually-hidden">Стоимость товара</label>
               <span class="min-range">От 0</span>
               <input class="filter-range" id="filter-range" type="range" min="0" max="5000" step="500">
               <span class="max-range">до 5000</span>
-            </div>
+            </section>
           </fieldset>
           <fieldset>
             <legend>Цвет</legend>
-            <ul>
+            <ul class="filters-list">
               <li class="filter-option">
                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="black" id="filter-black" checked>
                 <label for="filter-black">Черный</label>
@@ -101,7 +108,7 @@
           </fieldset>
           <fieldset>
             <legend>Bluetooth</legend>
-            <ul>
+            <ul class="filters-list">
               <li class="filter-option">
                 <input class="visually-hidden fitler-input filter-input-radio" type="radio" name="bluetooth-availability" id="filter-bluetooth-yes" checked>
                 <label for="filter-bluetooth-yes">Есть</label>
@@ -114,9 +121,7 @@
           </fieldset>
           <button class="button filter-button" type="submit">Показать</button>
       </form>
-      </div>
-      </section>
-
+    </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список моноподов для селфи</h2>
         <ul class="catalog-list">
@@ -182,16 +187,17 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li><a class="pagination-back" href="#">Назад</a></li>
-          <li>1</li>
+          <li class="pagination-back-item" ><a class="pagination-back" href="#">Назад</a></li>
+          <li><a class="current">1</a></li>
           <li><a class="pagination-item" href="#">2</a></li>
           <li><a class="pagination-item" href="#">3</a></li>
-          <li><a class="pagination-forward" href="#">Вперед</a></li>
+          <li class="pagination-forward-item"><a class="pagination-forward" href="#">Вперед</a></li>
         </ul>
       </section>
-    </div>
+      </div>
+    </section>
     </main>
-    <footer class="main-footer">
+    <footer class="main-footer footer-catalog">
       <div class="container">
       <div class="footer-top">
         <a class="footer-logo" href="index.html">DEVICE</a>
