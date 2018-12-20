@@ -35,10 +35,25 @@ a {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
-.visually-hidden {
-  display: none;
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }
 
 .button {
@@ -53,6 +68,7 @@ img {
   border: none;
   background-color: transparent;
 }
+
 .button:hover {
 
 }
@@ -76,17 +92,20 @@ img {
 }
 
 .main-menu {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-left: 60px;
   padding-right: 60px;
-  padding-top: 50px;
+  padding-top: 34px;
   background-color: #f7e296;
 }
 
 .header-logo {
   position: absolute;
+  top: -24px;
+  left: 57px;
   width: 165px;
   height: 48px;
   font-family: "Gilroy", sans-serif;
@@ -105,10 +124,31 @@ img {
 }
 
 .search-form {
-  width: 440px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 450px;
+  height: 49px;
+  margin-bottom: 26px;
 }
 
+.search-form::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+
+  background-image: url("../img/svg/search.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
 .search-form input[type="search"] {
+  width: 315px;
+  min-height: 49px;
+  padding-left: 40px;
+
   font: inherit;
 
   background-color: #f7e296;
@@ -129,6 +169,9 @@ img {
 }
 
 .button-search{ 
+  visibility: hidden;
+  width: 85px;
+  height: 49px;
   font: inherit;
 
   color: #000000;
@@ -145,20 +188,50 @@ img {
   color: #ffffff;
 
   background-color: #000000;
+  cursor: pointer;
 }
 
 .button-search:active {
+  visibility: visible;
+
   color: rgba(255, 255, 255, 0.3);
+
+  background-color: #000000;
+  cursor: pointer;
+}
+
+input[type="search"]:focus + .button-search {
+  visibility: visible;
 }
 
 .header-user-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
   width: 500px;
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
+}
+
+.header-user-menu ul {
+  padding: 0;
+  margin: 0;
+}
+.header-user-menu li {
+  display: block;
+  margin-right: 38px;
+}
+
+.header-user-menu li:last-child {
+  margin-right: 0;
 }
 
 .header-user-menu a{
+  position: relative;
+  padding-left: 26px;
   color: #000000;
 }
 
@@ -170,10 +243,78 @@ img {
   opacity: 0.3;
 }
 
-.site-menu  {
+.header-user-menu li:first-child {
+  margin-right: auto;
+}
+
+.header-user-menu .enter::before {
+  content: "";
+
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/svg/user.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.header-user-menu .compare::before {
+  content: "";
+
+  position: absolute;
+  bottom: 4px;
+  left: 7px;
+
+  width: 10px;
+  height: 10px;
+
+  background-image: url("../img/svg/compare.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.header-user-menu .cart::before {
+  content: "";
+
+  position: absolute;
+  bottom: 4px;
+  left: 3px;
+
+  width: 13px;
+  height: 12px;
+
+  background-image: url("../img/svg/cart.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.nav-site-menu  {
+  display: flex;
+  flex-wrap: wrap;
   width: 500px;
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+
+.nav-site-menu li {
+  display: block;
+  width: 120px;
+  margin-right: 38px;
+}
+
+.nav-site-menu li:last-child {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.site-menu {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -197,12 +338,38 @@ img {
 }
 
 .catalog-menu{
-  width: 440px;
   margin: 0;
   padding: 0;
 }
 
+.catalog-menu-visible {
+  width: 260px;
+}
+.catalog-href {
+  position: relative;
+  padding-right: 26px;
+}
+
+.catalog-href::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: -1px;
+  
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/svg/plus.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
 .catalog-menu-navigation {
+  visibility: hidden;
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 .catalog-menu-navigation a{
@@ -662,6 +829,8 @@ img {
 
 .pagination-list a {
   display: inline-block;
+
+  vertical-align: baseline;
 }
 
 li.pagination-back-item, 
