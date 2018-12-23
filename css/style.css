@@ -409,6 +409,9 @@ input[type="search"]:focus + .button-search {
   list-style: none;
 }
 
+.catalog-menu-navigation  a{
+  letter-spacing: 0.01em;
+}
 
 .catalog-href:hover + .catalog-menu-navigation::before,
 .catalog-menu-navigation:hover::before {
