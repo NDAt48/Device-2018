@@ -104,7 +104,7 @@
                         </table>
                         </div>
                       </li>
-                     <li class="number slider-item">
+                     <li class="number slider-item">s
                       <div class="slider-image">
                         <img src="img/slider-3.png" width="526" height="334" alt="Изображение квадрокоптера">
                       </div>
@@ -223,21 +223,26 @@
                 <section class="slider-vertical">
                     <h2 class="visually-hidden">Сервисы</h2>
                     <div class="container">
+                      <div class="buttons-container">
+                        <button class="button slider-vertical-button button-current" type="button">Доставка</button>
+                        <button class="button slider-vertical-button" type="button">Гарантия</button>
+                        <button class="button slider-vertical-button" type="button">Кредит</button>
+                      </div>
                     <ul class="slider-vertical-list">
-                      <li class="slider-vertical-item">
+                      <li class="slider-vertical-item slider-vertical-item-active">
                         <h3>Доставка</h3>
-                        <p>Мы с удовольствием доставим товар к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем поднимая его на ваш этаж.</p>
-                        <button class="button slider-vertical-item-button" type="button">Доставка</button>
+                        <p>Мы с удовольствием доставим ваш товар прямо к вашему<br> подъезду совершенно бесплатно! Ведь мы неплохо<br> заработаем, поднимая его на ваш этаж.</p>
                       </li>
                       <li class="slider-vertical-item">
                         <h3>Гарантия</h3>
-                        <p>Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-                        <button class="button slider-vertical-item-button" type="button">Гарантия</button>
+                        <p>Если из-за возгорания купленного у нас товара у вас сгорит<br> 
+                        дом — не переживайте, мы выдадим вам новый.<br> 
+                        Товар, не дом, конечно же.</p>
                       </li>
                       <li class="slider-vertical-item">
                         <h3>Кредит</h3>
-                        <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Наиболее выгодные для нашего банка, разумеется.</p>
-                        <button class="button slider-vertical-item-button" type="button">Кредит</button>
+                        <p>Залезть в долговую яму стало проще! Кредитные<br> консультанты подберут для вас наиболее выгодные<br>
+                        условия кредита. Наиболее выгодные для нашего банка, разумеется.</p>
                       </li>
                     </ul>
                   </div>
@@ -273,9 +278,9 @@
                 <section class="about">
                   <h2> О нас</h2>
                   <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас</p>
-                  <p>Мы можем доставить товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями.</p>
+                  <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями.</p>
                   <ul class="transport-companies">
-                    <li>Деловые линии</li>
+                    <li>Деловые Линии</li>
                     <li>Автотрейдинг</li>
                     <li>ЖелДорЭкспедиция</li>
                   </ul> 
@@ -284,7 +289,7 @@
                 <section class="contacts">
                   <h2>Контакты</h2>
                   <p>Вы можете забрать товар сами, заехав в наш офис.Заодно, вы сможете проверить работоспособность покупки. Всякое бывает</p>
-                  <a href="#"><img src="img/map.jpg" width="560" height="222" alt="map"></a>
+                  <a class="map" href="#"><img src="img/map.jpg" width="560" height="222" alt="map"></a>
                   <a class="button" href="#">Напишите нам</a>
                 </section>
               </div>
@@ -294,13 +299,28 @@
                 <div class="footer-top">
                   <a class="footer-logo">DEVICE</a>
                   <ul class="footer-user-menu">
-                    <li><a href="#">Войти</a></li>
-                    <li><a href="#">Сравнить</a></li>
-                    <li><a href="#">Корзина</a></li>
+                    <li>
+                      <a class="footer-menu-item" href="#"><b>Войти</b>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="#ffc600" class="footer-menu-icon"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/>
+                        </svg>
+                    </a>
+                  </li>
+                    <li>
+                      <a class="footer-menu-item" href="#"><b>Сравнить</b>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="#ffc600" class="footer-menu-icon icon-compare"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/>
+                        </svg>
+                    </a>
+                  </li>
+                    <li>
+                      <a class="footer-menu-item" href="#"><b>Корзина</b>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="#ffc600" class="footer-menu-icon icon-cart"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
+                        </svg>
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div class="footer-middle">
-                <p>г. Москва, Ул. Строителей 15</p>
+                <p>г. Москва, ул. Строителей, 15</p>
                 <ul class="site-menu footer-site-menu">
                   <li><a href="#">Доставка</a></li>
                   <li><a href="#">Гарантия</a></li>
@@ -310,12 +330,12 @@
               </div>
                 <div class="footer-bottom">
                   <ul class="social-buttons">
-                    <li><a class="social-btn-facebook" href="#">Facebook</a></li>
-                    <li><a class="social-btn-instagram" href="#">Instagram</a></li>
-                    <li><a class="social-btn-twitter" href="#">Twitter</a></li>
+                    <li><a class="social-btn-facebook" href="#"><span class="visually-hidden">Facebook</a></li>
+                    <li><a class="social-btn-instagram" href="#"><span class="visually-hidden">Instagram</span></a></li>
+                    <li><a class="social-btn-twitter" href="#"><span class="visually-hidden">Twitter</span></a></li>
                   </ul>
                   <p class="copyright">
-                    <a class="button-copyright" href="https://htmlacademy.ru">HTML Academy</a>
+                    <a class="button-copyright" href="https://htmlacademy.ru"><span class="visually-hidden">HTML Academy</span></a>
                   </p>
                 </div>
               </div>
